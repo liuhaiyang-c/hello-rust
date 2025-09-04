@@ -33,10 +33,10 @@ fn main() {
 
 fn get_user_input() -> String {
     let mut input = String::new();
-    return match std::io::stdin().read_line(&mut input) {
+    match std::io::stdin().read_line(&mut input) {
         Ok(_) => input,
         Err(_) => String::new(),
-    };
+    }
 }
 
 fn get_random_num() -> i32 {
